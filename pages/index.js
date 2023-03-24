@@ -28,7 +28,6 @@ export default function Home({blog}) {
         <div class="container px-5 py-24 mx-auto">
           <div class="flex flex-wrap -m-4">
             {blog.map((blog) => {
-              console.log(blog,"mapmapmapmapmapmapmapmapmapmapmapmapmapmapmapmapmapmapmapmapmapmapmapmap");
             return <BlogItem key={blog.id} {...blog}></BlogItem>
             })}
           </div>
