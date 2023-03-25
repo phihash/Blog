@@ -3,6 +3,7 @@ import dayjs from 'dayjs';
 import Link from "next/link";
 import utc from 'dayjs/plugin/utc';
 import timezone from 'dayjs/plugin/timezone';
+import Head from "next/head";
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
@@ -30,6 +31,12 @@ export const getStaticPaths = async () => {
 export default function BlogId({blog}){
   return (
       <>
+      <Head>
+        <title>{blog.title}</title>
+        <meta name="description" content="phihash blog" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+</Head>
         <main class="container px-10 py-8 mx-auto">
           <h1 class="title-font text-xl font-bold mb-6">{blog.title}</h1>
           <p class="font-semibold text-sm">
