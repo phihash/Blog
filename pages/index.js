@@ -4,7 +4,12 @@ import BlogItem from '../components/blogItem'
 
 
 export const getStaticProps = async () => {
-  const data = await client.get({endpoint:"blog"});
+  const data = await client.get({
+    endpoint:"blog",
+    queries:{
+      limit:15
+    }
+  });
   // const tag = await client.get({ endpoint: "tag" });
   return {
     props:{
