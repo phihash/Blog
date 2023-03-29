@@ -33,7 +33,7 @@ export default function Tag({tags}) {
     {tags.map((tag) => {
       return (
       <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-        <Link href={`blog/${tag.id}`} legacyBehavior>
+        <Link href={`tag/${tag.id}`} legacyBehavior>
         <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
           <div class="flex-grow ml-4">
             <h2 class="text-gray-900 title-font font-bold">{tag.tag}</h2>

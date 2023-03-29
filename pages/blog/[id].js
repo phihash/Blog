@@ -38,7 +38,7 @@ export default function BlogId({blog}){
         <link rel="icon" href="/favicon.ico" />
 </Head>
         <main class="container px-10 py-8 mx-auto">
-          <h1 class="title-font text-xl font-bold mb-6">{blog.title}</h1>
+          <h1 class="title-font text-2xl font-bold mb-6">{blog.title}</h1>
           <p class="font-semibold text-sm">
             <span class="mr-2">公開日 {dayjs.utc(blog.publishedAt).tz('Asia/Tokyo').format('YY/MM/DD hh:mm')}</span>
             修正日 {dayjs.utc(blog.revisedAt).tz('Asia/Tokyo').format('YY/MM/DD hh:mm')}
